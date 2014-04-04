@@ -14,7 +14,7 @@ end
 
 post '/' do
   id = params[:id]
-  @amount =params[:amount].to_i
+  @amount = params[:amount].to_i
 
   @photos = Flickr.photos.search(user_id: id)
 
