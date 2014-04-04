@@ -9,7 +9,13 @@ Flickr.configure do |config|
 end
 
 get '/' do
-  id = "25777376@N05"
+  erb :form
+end
+
+post '/' do
+  id = params[:id]
+  @amount =params[:amount].to_i
+
   @photos = Flickr.photos.search(user_id: id)
 
   @photo_urls = @photos.map{|photo|

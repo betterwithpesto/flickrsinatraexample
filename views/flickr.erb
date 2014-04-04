@@ -1,5 +1,9 @@
 <body>
-<% @photo_urls.each do |url| %>
-  <img src="<%=url%>"> <br />
-<% end %>
+<% i = 0
+  while i < @amount do
+%>
+  <img src="<%=@photo_urls[i]%>"> <br />
+<%
+i += 1
+end %>
 </body>
